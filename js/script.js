@@ -31,12 +31,21 @@ quoteForm.addEventListener("submit", (e) => {
     e.preventDefault(); 
     //preventDefault() on the form's submission will prevent the page from refreshing, allowing you to handle and process the form without causing the entire page to reload.
     let NameSurname = document.getElementById ("NameSurname");
-    console.log (NameSurname.value);
+    console.log(NameSurname.value);
+
+    let PNR = Math.floor(Math.random() * 2000)
+    console.log(PNR);
+    let carriage = Math.floor(Math.random() * 12)
+    console.log= (carriage);
+    
     let TotalKm = document.getElementById("TotalKm");
     let UserAge = document.getElementById("age-select").value;
 
     document.getElementById("paxName").innerHTML = `Sig/Sig.ra ${NameSurname.value}`;
+    document.getElementById("carriageNo").innerHTML = `Carrozza # ${carriage}`;
     const PriceKm = 0.21;
+    document.getElementById("PnrNo").innerHTML = `PNR # ${PNR}`;
+
     
     let TotPrice = TotalKm.value * PriceKm ;
     const sDiscount = 0.20;
@@ -46,23 +55,18 @@ quoteForm.addEventListener("submit", (e) => {
 
 
     if (UserAge.value = "Minorenne" ) {
-        console.log ("Minorenne, sconto del 20%");
         let Discount = 0.20;
-        console.log (`€ ${TotPrice  * Discount}`);
         let TotDiscount = (TotPrice * Discount);
         let NetPrice =  (TotPrice -  TotDiscount).toFixed(2) ;
         document.getElementById("ticketCost").innerHTML =`€ ${NetPrice}`;
     }else if (UserAge.value = "Pensionato" ){
-        console.log ("Pensionato, sconto del 40%");
+
         const Discount = 0.40;
-        console.log (`€ ${TotPrice  * Discount}`);
         let TotDiscount = (TotPrice * Discount);
         let NetPrice = (TotPrice -  TotDiscount).toFixed(2); 
         document.getElementById("ticketCost").innerHTML =`€ ${NetPrice.value}`;
         
-    }else{
-        console.log ("Nessuno sconto applicato");
-        console.log (`€ ${TotPrice}`);
+    }else if (UserAge.value = "Maggiorenne"){
         let NetPrice =  (TotPrice).toFixed(2);
 
     }
