@@ -1,0 +1,20 @@
+:root {
+    --primary-magenta: #B91450;
+    --secondary-gray: #CCCCCC;
+    --primary-gray: #808080;
+    --primary--white: #FFFFFF;
+}
+
+
+body {
+    background-color: var(--primary-magenta);
+
+}
+
+.text-white {
+    color: var(--primary--white);
+}
+
+.text-magenta{
+    color: var(--primary-magenta);
+}
