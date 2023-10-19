@@ -11,10 +11,22 @@ body {
 
 }
 
-.text-white {
+.ms_text-white {
     color: var(--primary--white);
 }
 
-.text-magenta{
+.ms_text-magenta{
     color: var(--primary-magenta);
+}
+
+.ms_font_size {
+    font-size: 20px;
+}
+
+.ms_bg-white {
+    background-color: white;
+}
+
+.ms_border-radius {
+    border-radius: 10px;
 }
