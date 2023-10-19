@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biglietto del treno form</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link
       rel="stylesheet"
@@ -16,7 +16,7 @@
     />
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="ms_container">
         <div class="title justify-content-center">
             <h2 class="ms_text-white text-uppercase mt-4 text-center d-none d-md-block font-weight-bold">
                 Calcola il prezzo del tuo biglietto
@@ -30,20 +30,165 @@
 
         <div class="row">
             
-            <div class="col-10 border-light offset-1 ms_bg-white ms_border-radius p-4 mt-5 d-flex flex-column d-lg-flex flex-lg-row mb-2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. A nulla porro, vitae veniam, eius consectetur quibusdam officia, ex deleniti vel itaque possimus? Dolorem consequuntur officia hic. Incidunt placeat id distinctio!
+            <div class="col-12 border-light ms_bg-white ms_border-radius p-4 mt-5 mb-2">
+                <form id="quoteForm">
+                    <div class="row d-flex flex-column flex-lg-row">
+                        <div class="col">
+                            <div class="form-group d-flex flex-column">
+                                <label for="NameSurname"> Nome e Cognome</label>
+                                <input type="text" class="form-control" id="NameSurname" placeholder="Inserisci nome e cognome">
+                            </div>
+                            
+                        </div>
+                        <div class="col">
+                            <div class="form-group d-flex flex-column ">
+                                <label for="TotalKm"> Km da percorrere </label>
+                                <input type="text" class="form-control" id="TotalKm" placeholder="Inserisci i kilometri">
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-group d-flex flex-column">
+                                <label for="age-select"> Inserisci la tua fascia d'età</label>
+    
+                                <select class="age-select" id="age-select"  aria-label="age select">
+                                    <option selected>Fascia di età</option>
+                                    <option value="Minorenne">Minorenne</option>
+                                    <option value="Maggiorenne">Maggiorenne</option>
+                                    <option value="Pensionato">Pensionato</option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="buttons justify-content-center align-items-center text-center mt-3">
+                        <button class="btn btn-primary " id="submit" >
+                            Genera
+
+                        </button>
+                        <button class="btn btn-primary" id="clear">
+                            Annulla
+
+                        </button>
+
+                    </div>
+                </form>
+               
+                    
+               
             </div>
-            <div class="col-10 border-light offset-1 ms_bg-white p-4 mt-5 d-flex flex-column d-lg-flex flex-lg-row mb-2">
+            <div class="title justify-content-center align-items-center">
+                <h2 class="ms_text-white text-uppercase mt-4 mb-0 text-center font-weight-bold">
+                    IL TUO BIGLIETTO
+                    
+                </h2>    
+            </div>
+                
+            <div class="col-12 border-light ms_bg-white p-4 mt-3 mb-2">
+                <div class="row d-flex flex-column flex-lg-row">
+
+               
+                    <div class="col-auto">
+                        <table class="d-flex d-lg-block justify-content-between" >
+                            <thead>
+                                <th>
+                                    Nome Passeggero
+                                </th>
+
+                            </thead>
+                            <tbody>
+                                <td id="paxName">
+                                    [Nome Passeggero]
+                                </td>
+                            </tbody>
+                            
+                            
+                        </table>
+                    </div>
+                    <div class="col-auto">
+                        <table class="d-flex d-lg-block justify-content-between" >
+                            <thead>
+                                <th>
+                                    Offerta
+                                </th>
+
+                            </thead>
+                            <tbody>
+                                <td>
+                                    Biglietto Standard
+                                </td>
+                            </tbody>
+                            
+                            
+                        </table>
+
+
+                    </div>
+                    <div class="col-auto">
+                        <table class="d-flex d-lg-block justify-content-between" >
+                            <thead>
+                                <th>
+                                    Carrozza
+                                </th>
+
+                            </thead>
+                            <tbody>
+                                <td id="carriageNo">
+                                    [Numero carrozza]
+                                </td>
+                            </tbody>
+                            
+                            
+                        </table>
+
+                    </div>
+                    <div class="col-auto">
+                        <table class="d-flex d-lg-block justify-content-between" >
+                            <thead>
+                                <th>
+                                    PNR
+                                </th>
+
+                            </thead>
+                            <tbody>
+                                <td id="PnrNo">
+                                    [PNR]
+                                </td>
+                            </tbody>
+                            
+                            
+                        </table>
+
+                    </div>
+                    <div class="col-auto">
+                        <table class="d-flex d-lg-block justify-content-between" >
+                            <thead>
+                                <th>
+                                    Costo Biglietto
+                                </th>
+
+                            </thead>
+                            <tbody>
+                                <td id="ticketCost">
+                                    [Costo Biglietto]
+                                </td>
+                            </tbody>
+                            
+                            
+                        </table>
+
+                    </div>
+                </div>
 
             </div>
+        
+
         </div>
     </div>
 
 
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
