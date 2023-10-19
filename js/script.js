@@ -52,6 +52,7 @@ quoteForm.addEventListener("submit", (e) => {
     const bDiscount= 0.40;
     let Discount = "";
     let TotDiscount = TotPrice * Discount;
+    
 
 
     if (UserAge.value = "Minorenne" ) {
@@ -64,14 +65,26 @@ quoteForm.addEventListener("submit", (e) => {
         const Discount = 0.40;
         let TotDiscount = (TotPrice * Discount);
         let NetPrice = (TotPrice -  TotDiscount).toFixed(2); 
-        document.getElementById("ticketCost").innerHTML =`€ ${NetPrice.value}`;
+        document.getElementById("ticketCost").innerHTML =`€ ${NetPrice}`;
         
     }else if (UserAge.value = "Maggiorenne"){
         let NetPrice =  (TotPrice).toFixed(2);
+        document.getElementById("ticketCost").innerHTML = `€ ${NetPrice}`;
+
 
     }
 
 
     
 })
+
+document.getElementById("clear").addEventListener("click", function () {
+    NameSurname.value = "";
+    TotalKm.value = "";
+    document.getElementById('age-select').selectedIndex = 0;
+    document.getElementById("paxName").innerHTML = "";
+    document.getElementById("carriageNo").innerHTML = "";
+    document.getElementById("PnrNo").innerHTML = "";
+    document.getElementById("ticketCost").innerHTML = "";
+});
 

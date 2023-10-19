@@ -52,7 +52,7 @@
                                 <label for="age-select"> Inserisci la tua fascia d'età</label>
     
                                 <select class="age-select" id="age-select"  aria-label="age select">
-                                    <option selected>Fascia di età</option>
+                                    <option selected value="default">Fascia di età</option>
                                     <option value="Minorenne">Minorenne</option>
                                     <option value="Maggiorenne">Maggiorenne</option>
                                     <option value="Pensionato">Pensionato</option>
@@ -90,7 +90,7 @@
 
                
                     <div class="col-auto">
-                        <table class="d-flex d-lg-block justify-content-between" >
+                        <table class="d-flex d-lg-block justify-content-between" id="ticketName" >
                             <thead>
                                 <th>
                                     Nome Passeggero
@@ -107,7 +107,7 @@
                         </table>
                     </div>
                     <div class="col-auto">
-                        <table class="d-flex d-lg-block justify-content-between" >
+                        <table class="d-flex d-lg-block justify-content-between" id="ticketType" >
                             <thead>
                                 <th>
                                     Offerta
@@ -115,7 +115,7 @@
 
                             </thead>
                             <tbody>
-                                <td>
+                                <td class="ticketDefalt">
                                     Biglietto Standard
                                 </td>
                             </tbody>
@@ -126,7 +126,7 @@
 
                     </div>
                     <div class="col-auto">
-                        <table class="d-flex d-lg-block justify-content-between" >
+                        <table class="d-flex d-lg-block justify-content-between" id="ticketCarriage" >
                             <thead>
                                 <th>
                                     Carrozza
@@ -144,7 +144,7 @@
 
                     </div>
                     <div class="col-auto">
-                        <table class="d-flex d-lg-block justify-content-between" >
+                        <table class="d-flex d-lg-block justify-content-between" id="ticketPnr" >
                             <thead>
                                 <th>
                                     PNR
@@ -162,7 +162,7 @@
 
                     </div>
                     <div class="col-auto">
-                        <table class="d-flex d-lg-block justify-content-between" >
+                        <table class="d-flex d-lg-block justify-content-between"id="ticketPrice" >
                             <thead>
                                 <th>
                                     Costo Biglietto
